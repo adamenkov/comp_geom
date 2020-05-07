@@ -75,7 +75,7 @@ namespace Triangulation
 
 			while (vertices.Count > 3)
 			{
-				for (int index = 0; index < vertices.Count; ++index)
+				for (int index = 0; index < vertices.Count; )
 				{
 					Vertex vertex = vertices[index];
 					if (vertex.isEar)
@@ -88,7 +88,10 @@ namespace Triangulation
 
 						ComputeIsEar(PrevIndex(index));
 						ComputeIsEar(NextIndex(PrevIndex(index)));
-						--index;
+					}
+					else
+					{
+						++index;
 					}
 				}
 			}
