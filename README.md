@@ -1,2 +1,2 @@
 # comp_geom
- Reading "Computational Geometry in C"
+Exercise after reading Chapter 1 of "Computational Geometry in C" - polygon triangulation.
